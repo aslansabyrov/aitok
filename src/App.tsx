@@ -124,17 +124,6 @@ const App: React.FC = () => {
           </IonSlide>
           <IonSlide>
             <SlideContent
-                title={"Всегда под рукой "}
-                onClick={handleButtonClick}
-                description={
-                  "Каталог с мини-приложениями находится на центральной вкладке. Пользователи легко его найдут"
-                }
-                buttonTitle={"Что ещё?"}
-                imgSrc={"/assets/slide3.png"}
-            ></SlideContent>
-          </IonSlide>
-          <IonSlide>
-            <SlideContent
                 title={"Баннер с ваши предложением"}
                 onClick={handleButtonClick}
                 description={
