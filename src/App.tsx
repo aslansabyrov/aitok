@@ -91,7 +91,7 @@ const App: React.FC = () => {
   }, []);
 
   const [name, setName] = useState("<username>");
-
+  const [icon, setIcon] = useState("<icon>");
   const handleButtonClick = () => {
     slider.current?.slideNext();
   };
@@ -125,6 +125,17 @@ const App: React.FC = () => {
           <IonSlide>
             <SlideContent
                 title={"Обменивайте AiCoins на ценные призы"}
+                onClick={handleButtonClick}
+                description={
+                  "От чашечки кофе до цифровых гаджетов"
+                }
+                buttonTitle={"Далее"}
+                imgSrc={"/assets/completed-removebg-preview.png"}
+            ></SlideContent>
+          </IonSlide>
+          <IonSlide>
+            <SlideContent
+                title={${icon}, ${name}, Добро пожаловать в AiTok!}
                 onClick={handleButtonClick}
                 description={
                   "От чашечки кофе до цифровых гаджетов"
