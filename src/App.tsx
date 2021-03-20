@@ -119,7 +119,7 @@ const App: React.FC = () => {
                   "Могут увидеть ваше мини-приложение и стать его пользователями"
                 }
                 buttonTitle={"Интересно"}
-                imgSrc={"/assets/video_text.png"}
+                imgSrc={"/assets/video_upd_text-removebg-preview.png"}
             ></SlideContent>
           </IonSlide>
           <IonSlide>
