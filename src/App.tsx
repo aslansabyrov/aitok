@@ -9,8 +9,10 @@ import {
   IonText,
 } from "@ionic/react";
 
+import { useHistory } from "react-router-dom";
+import {Route,Link} from "react-router-dom";
+import Home from "./Home";
 import "./App.css";
-
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -91,12 +93,18 @@ const App: React.FC = () => {
   }, []);
 
   const [name, setName] = useState("<username>");
-  const [icon, setIcon] = useState("<icon>");
+
   const handleButtonClick = () => {
     slider.current?.slideNext();
-  };
+  }; 
+  const history = useHistory();
 
-  return (
+  const redirect = () =>{ 
+    let path = `/home`; 
+    history.push(path);
+  }
+  
+  return (  
     <IonApp>
       <IonContent>
         <IonSlides pager={true} options={slideOpts} ref={slider}>
@@ -125,28 +133,19 @@ const App: React.FC = () => {
           <IonSlide>
             <SlideContent
                 title={"Обменивайте AiCoins на ценные призы"}
-                onClick={handleButtonClick}
+                onClick={redirect}
                 description={
                   "От чашечки кофе до цифровых гаджетов"
                 }
                 buttonTitle={"Далее"}
                 imgSrc={"/assets/completed-removebg-preview.png"}
-            ></SlideContent>
-          </IonSlide>
-          <IonSlide>
-            <SlideContent
-                title={"${icon}, ${name}, Добро пожаловать в AiTok!"}
-                onClick={handleButtonClick}
-                description={
-                  "От чашечки кофе до цифровых гаджетов"
-                }
-                buttonTitle={"Далее"}
-                imgSrc={"/assets/completed-removebg-preview.png"}
-            ></SlideContent>
+            >
+            </SlideContent>
           </IonSlide>
         </IonSlides>
-      </IonContent>
+      </IonContent><Route path="/home" component={Home}/>
     </IonApp>
+ 
   );
 };
 
