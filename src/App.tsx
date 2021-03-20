@@ -135,7 +135,7 @@ const App: React.FC = () => {
           </IonSlide>
           <IonSlide>
             <SlideContent
-                title={${icon}, ${name}, "Добро пожаловать в AiTok!"}
+                title={"${icon}, ${name}, Добро пожаловать в AiTok!"}
                 onClick={handleButtonClick}
                 description={
                   "От чашечки кофе до цифровых гаджетов"
