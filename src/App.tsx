@@ -119,7 +119,7 @@ const App: React.FC = () => {
                   "Могут увидеть ваше мини-приложение и стать его пользователями"
                 }
                 buttonTitle={"Интересно"}
-                imgSrc={"/assets/slide2.png"}
+                imgSrc={"/assets/video_text.png"}
             ></SlideContent>
           </IonSlide>
           <IonSlide>
@@ -130,7 +130,7 @@ const App: React.FC = () => {
                   "         Уникальная скидка, спецпредложение или акция. Донесите ценное предложение до всех пользователей Aitu"
                 }
                 buttonTitle={"Далее"}
-                imgSrc={"/assets/vide_text.png"}
+                
             ></SlideContent>
           </IonSlide>
         </IonSlides>
