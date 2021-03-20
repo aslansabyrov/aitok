@@ -119,7 +119,7 @@ const App: React.FC = () => {
                   "И зарабатывайте AiCoins"
                 }
                 buttonTitle={"Дальше"}
-                imgSrc={"/assets/video_text.png"}
+                imgSrc={"/assets/video_upd_text-removebg-preview.png"}
             ></SlideContent>
           </IonSlide>
           <IonSlide>
