@@ -130,7 +130,7 @@ const App: React.FC = () => {
                   "         Уникальная скидка, спецпредложение или акция. Донесите ценное предложение до всех пользователей Aitu"
                 }
                 buttonTitle={"Далее"}
-                imgSrc={"/assets/slide4.png"}
+                imgSrc={"/assets/vide_text.png"}
             ></SlideContent>
           </IonSlide>
         </IonSlides>
