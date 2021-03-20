@@ -113,7 +113,7 @@ const App: React.FC = () => {
           </IonSlide>
           <IonSlide>
             <SlideContent
-                title={"+800.000 пользователей Aitu"}
+                title={"Ставьте #aitu в свои видео"}
                 onClick={handleButtonClick}
                 description={
                   "Могут увидеть ваше мини-приложение и стать его пользователями"
