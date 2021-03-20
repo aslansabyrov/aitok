@@ -116,21 +116,21 @@ const App: React.FC = () => {
                 title={"Ставьте #aitu в свои видео"}
                 onClick={handleButtonClick}
                 description={
-                  "Могут увидеть ваше мини-приложение и стать его пользователями"
+                  "И зарабатывайте AiCoins"
                 }
-                buttonTitle={"Интересно"}
-                imgSrc={"/assets/video_upd_text-removebg-preview.png"}
+                buttonTitle={"Дальше"}
+                imgSrc={"/assets/video_text.png"}
             ></SlideContent>
           </IonSlide>
           <IonSlide>
             <SlideContent
-                title={"Баннер с ваши предложением"}
+                title={"Обменивайте AiCoins на ценные призы"}
                 onClick={handleButtonClick}
                 description={
-                  "         Уникальная скидка, спецпредложение или акция. Донесите ценное предложение до всех пользователей Aitu"
+                  "От чашечки кофе до цифровых гаджетов"
                 }
                 buttonTitle={"Далее"}
-               imgSrc={"/assets/video_text.png"}
+                imgSrc={"/assets/completed-removebg-preview.png"}
             ></SlideContent>
           </IonSlide>
         </IonSlides>
