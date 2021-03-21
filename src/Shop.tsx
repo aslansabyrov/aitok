@@ -167,7 +167,7 @@ const Shop: React.FC = () => {
           onDidDismiss={() => setShowAlert1(false)}
           cssClass='my-custom-class'
           header={'Confirmation'}
-          message={'Are you sure you want to <strong>buy</strong> coffee?'}
+          message={'Are you sure you want to <strong>get a free ride?</strong> coffee?'}
           buttons={[
             {
               text: 'Cancel',
@@ -200,7 +200,7 @@ const Shop: React.FC = () => {
           onDidDismiss={() => setShowAlert1(false)}
           cssClass='my-custom-class'
           header={'Confirmation'}
-          message={'Are you sure you want to <strong>buy</strong> coffee?'}
+          message={'Are you sure you want to <strong>laptop</strong> coffee?'}
           buttons={[
             {
               text: 'Cancel',
