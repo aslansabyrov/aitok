@@ -7,12 +7,14 @@ import {
   IonContent,
   IonButton,
   IonText,
+  
 } from "@ionic/react";
 
 import { useHistory } from "react-router-dom";
 import {Route,Link} from "react-router-dom";
 import Home from "./Home";
 import "./App.css";
+import Achievements from "./Achievements"
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -80,11 +82,13 @@ const App: React.FC = () => {
     try {
       const data = await aituBridge.getMe();
       setName(data.name);
+
     } catch (e) {
       // handle error
       console.log(e);
     }
   }
+ 
 
   useEffect(() => {
     if (aituBridge.isSupported()) {
@@ -94,15 +98,17 @@ const App: React.FC = () => {
 
   const [name, setName] = useState("<username>");
 
+
   const handleButtonClick = () => {
     slider.current?.slideNext();
   }; 
   const history = useHistory();
 
-  const redirect = () =>{ 
+  const redirecthome = () =>{ 
     let path = `/home`; 
     history.push(path);
   }
+
   
   return (  
     <IonApp>
@@ -133,7 +139,7 @@ const App: React.FC = () => {
           <IonSlide>
             <SlideContent
                 title={"Обменивайте AiCoins на ценные призы"}
-                onClick={redirect}
+                onClick={redirecthome}
                 description={
                   "От чашечки кофе до цифровых гаджетов"
                 }
@@ -144,6 +150,7 @@ const App: React.FC = () => {
           </IonSlide>
         </IonSlides>
       </IonContent><Route path="/home" component={Home}/>
+      <Route path="/achievements" component={Achievements}/>
     </IonApp>
  
   );
