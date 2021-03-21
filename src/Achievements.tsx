@@ -111,7 +111,7 @@ const Achievements: React.FC = () => {
     </IonAvatar>
     
       <IonToolbar>
-        <IonTitle>${name}'s profile</IonTitle>
+        <IonTitle>{name}'s profile</IonTitle>
       </IonToolbar>
     </IonHeader>
     <IonContent>
