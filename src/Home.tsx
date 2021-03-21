@@ -103,6 +103,9 @@ const Home: React.FC = () => {
   const history = useHistory();
 
   const [checked, setChecked] = useState(false);
+
+  const[somecheck, getChecked] = useState(false);
+  const[huycheck, retChecked] = useState(false);
   const redirectachiev = () =>{
     let path = `/achievements`; 
     history.push(path);
@@ -132,14 +135,14 @@ const Home: React.FC = () => {
         <IonCardHeader>
           <IonCardTitle>Earn 100 likes</IonCardTitle>
           <IonItem>
-            <IonCheckbox checked={checked} onIonChange={e => setChecked(e.detail.checked)} />
+            <IonCheckbox checked={somecheck} onIonChange={e => getChecked(e.detail.checked)} />
           </IonItem>
         </IonCardHeader>
       </IonCard>    <IonCard>
         <IonCardHeader>
           <IonCardTitle>Post 5 comments on our sponsor's account</IonCardTitle>
           <IonItem>
-            <IonCheckbox checked={checked} onIonChange={e => setChecked(e.detail.checked)} />
+            <IonCheckbox checked={huycheck} onIonChange={e => retChecked(e.detail.checked)} />
           </IonItem>
         </IonCardHeader>
       </IonCard>
