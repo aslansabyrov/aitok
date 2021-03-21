@@ -6,9 +6,10 @@ import {
   IonSlide,
   IonContent,
   IonText,
-  IonToggle
+  IonToggle,  IonTabs, IonTabBar, IonTabButton, IonBadge
 } from "@ionic/react";
 import React from 'react';
+import { calendar, personCircle, map, informationCircle } from 'ionicons/icons';
 import { IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
 import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
 import {IonAvatar,IonCheckbox} from '@ionic/react';
@@ -102,16 +103,19 @@ const Home: React.FC = () => {
   const history = useHistory();
 
   const [checked, setChecked] = useState(false);
-  
+  const redirectachiev = () =>{
+    let path = `/achievements`; 
+    history.push(path);
+  }
   return (  
     <IonPage>
+
     <IonHeader>
         <IonAvatar>
         <img src="/assets/doom.jpg" />
     </IonAvatar>
-    
       <IonToolbar>
-        <IonTitle>${name}'s profile</IonTitle>
+        <IonTitle>{name}'s profile</IonTitle>
       </IonToolbar>
     </IonHeader>
     <IonContent>
@@ -126,21 +130,36 @@ const Home: React.FC = () => {
       </IonCard>
       <IonCard>
         <IonCardHeader>
+          <IonCardTitle>Earn 100 likes</IonCardTitle>
+          <IonItem>
+            <IonCheckbox checked={checked} onIonChange={e => setChecked(e.detail.checked)} />
+          </IonItem>
+        </IonCardHeader>
+      </IonCard>    <IonCard>
+        <IonCardHeader>
+          <IonCardTitle>Post 5 comments on our sponsor's account</IonCardTitle>
+          <IonItem>
+            <IonCheckbox checked={checked} onIonChange={e => setChecked(e.detail.checked)} />
+          </IonItem>
+        </IonCardHeader>
+      </IonCard>
+      <IonCard>
+        <IonCardHeader>
           <IonCardSubtitle>Made tasks all time</IonCardSubtitle>
           <IonCardTitle>15</IonCardTitle>
         </IonCardHeader>
       </IonCard>
-
       <IonCard>
         <IonCardHeader>
           <IonCardSubtitle>Number of AiCoins</IonCardSubtitle>
           <IonCardTitle>1500</IonCardTitle>
         </IonCardHeader>
       </IonCard> 
-      <IonButton color="success" type = "button">
-      <IonIcon/>
-      </IonButton>
-      
+      <IonButton 
+      color="success" 
+      onClick={ () => redirectachiev() }
+    >
+    Achievements</IonButton>
     </IonContent>
   </IonPage>
  
