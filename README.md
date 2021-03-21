@@ -1,10 +1,3 @@
-# React Boilerplate
-
-React приложение, показывает как использовать библиотеку @btsd/aitu-bridge для управления приложением в Aitu Apps
-
-## Документация
-
-http://docs.aitu.io/
 
 ## Установка
 
