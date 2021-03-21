@@ -9,7 +9,7 @@ import {
   IonText,
   
 } from "@ionic/react";
-
+import Shop from "./Shop"
 import { useHistory } from "react-router-dom";
 import {Route,Link} from "react-router-dom";
 import Home from "./Home";
@@ -151,6 +151,7 @@ const App: React.FC = () => {
         </IonSlides>
       </IonContent><Route path="/home" component={Home}/>
       <Route path="/achievements" component={Achievements}/>
+      <Route path="/shop" component={Shop}/>
     </IonApp>
  
   );
