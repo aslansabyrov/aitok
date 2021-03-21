@@ -6,7 +6,7 @@ import {
   IonSlide,
   IonContent,
   IonText,
-  IonToggle,  IonTabs, IonTabBar, IonTabButton, IonBadge
+  IonToggle,  IonTabs, IonTabBar, IonTabButton, IonBadge, IonGrid
 } from "@ionic/react";
 import React from 'react';
 import { calendar, personCircle, map, informationCircle } from 'ionicons/icons';
@@ -15,9 +15,13 @@ import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
 import {IonAvatar,IonCheckbox} from '@ionic/react';
 import { useHistory } from "react-router-dom";
 import {Route,Link} from "react-router-dom";
+import Achievements from "./Achievements";
+
 import "./App.css";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
+
+import { IonRow, IonCol } from '@ionic/react';
 
 /* Basic CSS for apps built with Ionic */
 import "@ionic/react/css/normalize.css";
@@ -110,6 +114,10 @@ const Home: React.FC = () => {
     let path = `/achievements`; 
     history.push(path);
   }
+  const redirectshop = () =>{
+    let path = `/shop`; 
+    history.push(path);
+  }
   return (  
     <IonPage>
 
@@ -158,13 +166,21 @@ const Home: React.FC = () => {
           <IonCardTitle>1500</IonCardTitle>
         </IonCardHeader>
       </IonCard> 
-      <IonButton 
+ <IonCard>
+ <IonRow>
+        <IonCol><IonButton 
       color="success" 
       onClick={ () => redirectachiev() }
-    >
-    Achievements</IonButton>
+    >Achievements</IonButton></IonCol>
+        <IonCol> <IonButton 
+      color="success" 
+      onClick={ () => redirectachiev() }
+   >Shop</IonButton> </IonCol>
+      </IonRow> 
+      </IonCard> 
     </IonContent>
-  </IonPage>
+
+    </IonPage>
  
   );
 };
