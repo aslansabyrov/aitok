@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import aituBridge from "@btsd/aitu-bridge";
 import {
   IonApp,
+  IonAlert,
   IonSlides,
   IonSlide,
   IonContent,
@@ -103,6 +104,8 @@ const Shop: React.FC = () => {
   const history = useHistory();
 
   const [checked, setChecked] = useState(false);
+
+  const [showAlert1, setShowAlert1] = useState(false);
   
   return (  
     <IonPage>
@@ -112,37 +115,109 @@ const Shop: React.FC = () => {
     </IonAvatar>
     
       <IonToolbar>
-        <IonTitle>{name}'s achievements</IonTitle>
+        <IonTitle>{name}'s Shop</IonTitle>
       </IonToolbar>
     </IonHeader>
     <IonContent>
       <IonCard>
       <IonGrid>
       <IonRow>
-        <IonCol><img src="/assets/star.png"/></IonCol>
-        <IonCol> <IonCard>
+        <IonCol><img src="/assets/coffee.png"/></IonCol>
+        <IonCol>  <IonCard>
         <IonCardHeader>
-          <IonCardSubtitle>Upload video with #aitu</IonCardSubtitle>
-          <IonCardTitle>1500</IonCardTitle>
+          <IonCardSubtitle>One free coffee (1500 Aicoins)</IonCardSubtitle>
+          <IonCardTitle></IonCardTitle>
         </IonCardHeader>
+        <IonButton onClick={() => setShowAlert1(true)} expand="block">Purchase</IonButton>
+        <IonAlert
+          isOpen={showAlert1}
+          onDidDismiss={() => setShowAlert1(false)}
+          cssClass='my-custom-class'
+          header={'Confirmation'}
+          message={'Are you sure you want to <strong>buy</strong> coffee?'}
+          buttons={[
+            {
+              text: 'Cancel',
+              role: 'cancel',
+              cssClass: 'secondary',
+              handler: blah => {
+                console.log('Confirm Cancel: blah');
+              }
+            },
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('Confirm Okay');
+              }
+            }
+          ]}
+        />
       </IonCard> </IonCol>
       </IonRow> 
       <IonRow>
-        <IonCol><img src="/assets/star.png"/></IonCol>
+        <IonCol><img src="/assets/taxi.png"/></IonCol>
         <IonCol> <IonCard>
         <IonCardHeader>
-          <IonCardSubtitle>Earn 100 Likes</IonCardSubtitle>
-          <IonCardTitle>2000</IonCardTitle>
+          <IonCardSubtitle>Free ride on a taxi (5000 Aicoins)</IonCardSubtitle>
+          <IonCardTitle></IonCardTitle>
         </IonCardHeader>
+        <IonButton onClick={() => setShowAlert1(true)} expand="block">Purchase</IonButton>
+        <IonAlert
+          isOpen={showAlert1}
+          onDidDismiss={() => setShowAlert1(false)}
+          cssClass='my-custom-class'
+          header={'Confirmation'}
+          message={'Are you sure you want to <strong>buy</strong> coffee?'}
+          buttons={[
+            {
+              text: 'Cancel',
+              role: 'cancel',
+              cssClass: 'secondary',
+              handler: blah => {
+                console.log('Confirm Cancel: blah');
+              }
+            },
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('Confirm Okay');
+              }
+            }
+          ]}
+        />
       </IonCard> </IonCol>
       </IonRow> 
       <IonRow>
-        <IonCol><img src="/assets/empty_star.png"/></IonCol>
+        <IonCol><img src="/assets/laptop.png"/></IonCol>
         <IonCol> <IonCard>
         <IonCardHeader>
-          <IonCardSubtitle>Post 5 comments on our sponsor's account </IonCardSubtitle>
-          <IonCardTitle>500</IonCardTitle>
+          <IonCardSubtitle>Brand new laptop (5000000 Aicoins)</IonCardSubtitle>
+          <IonCardTitle></IonCardTitle>
         </IonCardHeader>
+        <IonButton onClick={() => setShowAlert1(true)} expand="block">Purchase</IonButton>
+        <IonAlert
+          isOpen={showAlert1}
+          onDidDismiss={() => setShowAlert1(false)}
+          cssClass='my-custom-class'
+          header={'Confirmation'}
+          message={'Are you sure you want to <strong>buy</strong> coffee?'}
+          buttons={[
+            {
+              text: 'Cancel',
+              role: 'cancel',
+              cssClass: 'secondary',
+              handler: blah => {
+                console.log('Confirm Cancel: blah');
+              }
+            },
+            {
+              text: 'Okay',
+              handler: () => {
+                console.log('Confirm Okay');
+              }
+            }
+          ]}
+        />
       </IonCard> </IonCol>
       </IonRow> 
        </IonGrid>
