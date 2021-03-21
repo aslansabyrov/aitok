@@ -174,7 +174,7 @@ const Home: React.FC = () => {
     >Achievements</IonButton></IonCol>
         <IonCol> <IonButton 
       color="success" 
-      onClick={ () => redirectachiev() }
+      onClick={ () => redirectshop() }
    >Shop</IonButton> </IonCol>
       </IonRow> 
       </IonCard> 
