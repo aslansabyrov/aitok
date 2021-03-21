@@ -9,6 +9,7 @@ import {
   IonToggle
 } from "@ionic/react";
 import React from 'react';
+import { IonGrid, IonRow, IonCol } from '@ionic/react';
 import { IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
 import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
 import {IonAvatar,IonCheckbox} from '@ionic/react';
@@ -111,36 +112,41 @@ const Achievements: React.FC = () => {
     </IonAvatar>
     
       <IonToolbar>
-        <IonTitle>{name}'s profile</IonTitle>
+        <IonTitle>{name}'s achievements</IonTitle>
       </IonToolbar>
     </IonHeader>
     <IonContent>
-    <IonCard>
-        <IonCardHeader>
-          <IonCardSubtitle>Daily task:</IonCardSubtitle>
-          <IonCardTitle>Upload Video with #aitu</IonCardTitle>
-          <IonItem>
-            <IonCheckbox checked={checked} onIonChange={e => setChecked(e.detail.checked)} />
-          </IonItem>
-        </IonCardHeader>
-      </IonCard>
       <IonCard>
+      <IonGrid>
+      <IonRow>
+        <IonCol><img src="/assets/star.png"/></IonCol>
+        <IonCol> <IonCard>
         <IonCardHeader>
-          <IonCardSubtitle>Made tasks all time</IonCardSubtitle>
-          <IonCardTitle>15</IonCardTitle>
-        </IonCardHeader>
-      </IonCard>
-
-      <IonCard>
-        <IonCardHeader>
-          <IonCardSubtitle>Number of AiCoins</IonCardSubtitle>
+          <IonCardSubtitle>Upload video with #aitu</IonCardSubtitle>
           <IonCardTitle>1500</IonCardTitle>
         </IonCardHeader>
-      </IonCard> 
-      <IonButton color="success" type = "button">
-      <IonIcon/>
-      </IonButton>
-      
+      </IonCard> </IonCol>
+      </IonRow> 
+      <IonRow>
+        <IonCol><img src="/assets/star.png"/></IonCol>
+        <IonCol> <IonCard>
+        <IonCardHeader>
+          <IonCardSubtitle>Earn 100 Likes</IonCardSubtitle>
+          <IonCardTitle>2000</IonCardTitle>
+        </IonCardHeader>
+      </IonCard> </IonCol>
+      </IonRow> 
+      <IonRow>
+        <IonCol><img src="/assets/empty_star.png"/></IonCol>
+        <IonCol> <IonCard>
+        <IonCardHeader>
+          <IonCardSubtitle>Post 5 comments on our sponsor's account </IonCardSubtitle>
+          <IonCardTitle>500</IonCardTitle>
+        </IonCardHeader>
+      </IonCard> </IonCol>
+      </IonRow> 
+       </IonGrid>
+      </IonCard>
     </IonContent>
   </IonPage>
  
